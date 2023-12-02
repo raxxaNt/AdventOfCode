@@ -26,23 +26,24 @@ int check_num(char *str)
             counter++;
             if (counter > 1) {
                 get_num = (str[i] - '0') * 10 + (str[i + 1] - '0');
-                if (check_color(str, i) == 1 && high_red < get_num)
+                if (check_color(str, i) == 1 && high_red <= get_num)
                     high_red = get_num;
-                else if (check_color(str, i) == 2 && high_green < get_num)
+                else if (check_color(str, i) == 2 && high_green <= get_num)
                     high_green = get_num;
-                else if (check_color(str, i) == 3 && high_blue < get_num)
+                else if (check_color(str, i) == 3 && high_blue <= get_num)
                     high_blue = get_num;
             }
+            i++;
         }
         else if (isdigit(str[i]) != 0) {
             counter++;
             if (counter > 1) {
                 get_num = str[i] - '0';
-                if (check_color(str, i) == 1 && high_red < get_num)
+                if (check_color(str, i) == 1 && high_red <= get_num)
                     high_red = get_num;
-                else if (check_color(str, i) == 2 && high_green < get_num)
+                else if (check_color(str, i) == 2 && high_green <= get_num)
                     high_green = get_num;
-                else if (check_color(str, i) == 3 && high_blue < get_num)
+                else if (check_color(str, i) == 3 && high_blue <= get_num)
                     high_blue = get_num;
             }       
         }
@@ -64,7 +65,7 @@ int main() {
         game_counter = check_num(cadena);
         tot_id += game_counter;
         i++; //
-        printf("Linea %d: %d\n", i, game_counter);
+        printf("Linea %d: %d\n", i, tot_id);
     }
     fclose(f);
     printf("La suma total es: %d\n", tot_id);
