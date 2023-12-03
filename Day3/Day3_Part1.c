@@ -52,7 +52,7 @@ int check_nums(char cadena[140][160], int line, char *cadena2, char *cadena1)
         }
         i++;
     }
-    printf("LINE: %d---SUM_LINE: %d\n", line, sum_line);
+    //printf("LINE: %d---SUM_LINE: %d\n", line, sum_line);
     return sum_line;
 }
 
