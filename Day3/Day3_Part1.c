@@ -88,7 +88,7 @@ int main () {
         //printf("Cadena: %s\n", cadena[line]);
         tot_sum += check_nums(cadena, line, cadena2, cadena1);
         line++;
-       // printf("Primer: %s\nSegon: %s\nTercer: %s\n", cadena1, cadena[line], cadena2);
+        printf("Primer: %s\nSegon: %s\nTercer: %s\n", cadena1, cadena[line], cadena2);
     }
     fclose(f);
     printf("La suma total es de: %d\n", tot_sum);
